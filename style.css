@@ -44,6 +44,7 @@ a {
 
 .largeFont {
     font-size: 20px;
+    margin-bottom: 6px;
 }
 
 .smallFont {
@@ -82,15 +83,15 @@ a {
 }
 
 .sectionContent .separator {
-    height: 14px;
+    height: 22px;
 }
 
 .sectionLine {
     border-style: dashed;
     border-width: 1px;
     border-color: #CFCFCF;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .divider {
