@@ -10,15 +10,15 @@
 <div id='basicsBlock' class='smallFont'>
 	<div class='contactBlock'>
 		{{#if email}}
-		<span class='email'>{{email}}</span>
+		<span class='email'><a href='mailto:{{email}}'>{{email}}</a></span>
 		{{/if}}
 		{{#if phone}}
 		<span class='divider'>|</span>
-		<span class='phone'>{{phone}}</span>
+		<span class='phone'><a href='tel:{{phone}}'>{{phone}}</a></span>
 		{{/if}}
 		{{#if url}}
 		<span class='divider'>|</span>
-		<span class='url'>{{url}}</span>
+		<span class='url'><a href='{{url}}'>{{cleanUrl url}}</a></span>
 		{{/if}}
 		{{#location}}
 		<span class='divider'>|</span>
@@ -32,7 +32,7 @@
 		{{#each profiles}}
 		{{#if url}}
 		<span class='url'>
-			<b>{{network}}:</b> <a href='{{url}}'>{{url}}</a>
+			<b>{{network}}:</b> <a href='{{url}}'>{{cleanUrl url}}</a>
 		</span>
 		{{#unless @last}}<span class='divider'>|</span>{{/unless}}
 		{{/if}}

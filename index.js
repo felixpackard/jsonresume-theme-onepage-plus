@@ -28,6 +28,16 @@ Handlebars.registerHelper('formatDate', function(dateString) {
     return dateStrArr;
 })
 
+// Display URLs cleanly by removing the protocol
+Handlebars.registerHelper('cleanUrl', function(url) {
+  if (!url || typeof url !== 'string') {
+    return '';
+  }
+  
+  // Remove protocol (http://, https://, ftp://, etc.) from the beginning
+  return url.replace(/^[a-zA-Z][a-zA-Z\d+\-.]*:\/\//, '');
+});
+
 function render(resume) {
     var css = fs.readFileSync(__dirname + "/style.css", "utf-8");
     var tpl = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
